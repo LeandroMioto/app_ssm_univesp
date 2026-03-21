@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Pecuária - Sítio São Marcos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/static/fundo.jpg'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh; color: white; padding: 20px; }
+        .glass-panel { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 15px; padding: 20px; border: 1px solid rgba(255,255,255,0.2); }
+        .table { color: white; }
+    </style>
+</head>
+<body>
+    <div class="container"><div class="glass-panel">
+        <div class="d-flex justify-content-between align-items-center mb-4"><h2>Histórico do Gado</h2><a href="/" class="btn btn-outline-light btn-sm">Sair</a></div>
+        <div class="table-responsive"><table class="table table-hover"><thead class="table-dark"><tr><th>Data</th><th>Tipo</th><th>Qtd</th><th>Arroba</th><th>Total</th></tr></thead>
+            <tbody>{% for p in pecuaria %}<tr><td>{{ p['data'] }}</td><td>{{ p['tipo_movimento'] }}</td><td>{{ p['quantidade_cabecas'] }}</td><td>{{ p['arroba_dia'] }}</td><td>R$ {{ p['valor_total'] }}</td></tr>{% endfor %}</tbody>
+        </table></div>
+    </div></div>
+</body>
+</html>

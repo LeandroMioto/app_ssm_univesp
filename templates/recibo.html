@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Recibo - Sítio São Marcos</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f4; padding: 30px; }
+        .recibo-container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.1); max-width: 800px; margin: auto; position: relative; }
+        .watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-size: 80px; color: rgba(0,0,0,0.03); z-index: 0; pointer-events: none; }
+        .header { border-bottom: 2px solid #2c3e50; padding-bottom: 20px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .valor-box { background: #2c3e50; color: white; padding: 10px 20px; border-radius: 5px; font-size: 24px; font-weight: bold; }
+        .content { font-size: 18px; line-height: 1.8; color: #333; z-index: 1; position: relative; }
+        .signature-area { margin-top: 60px; text-align: center; }
+        .line { border-top: 1px solid #000; width: 300px; margin: 10px auto; }
+        @media print { .btn-print { display: none; } body { background: white; padding: 0; } .recibo-container { box-shadow: none; border: 1px solid #eee; } }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 20px;" class="btn-print">
+        <button onclick="window.print()" style="padding: 10px 20px; cursor: pointer; background: #27ae60; color: white; border: none; border-radius: 5px; font-weight: bold;">🖨️ IMPRIMIR RECIBO</button>
+        <a href="/relatorio_pessoal" style="margin-left: 10px; color: #666;">Voltar</a>
+    </div>
+
+    <div class="recibo-container">
+        <div class="watermark">SÍTIO SÃO MARCOS</div>
+        <div class="header">
+            <div>
+                <h1 style="margin: 0; color: #2c3e50;">RECIBO</h1>
+                <p style="margin: 5px 0 0 0; color: #7f8c8d;">Sítio São Marcos - Ribeirão Preto/SP</p>
+            </div>
+            <div class="valor-box">R$ {{ dado.valor_pago }}</div>
+        </div>
+        <div class="content">
+            <p>Recebemos de <b>SÍTIO SÃO MARCOS</b> a quantia supra mencionada referente a:</p>
+            <p style="background: #f9f9f9; padding: 15px; border-radius: 5px; border-left: 5px solid #27ae60;">
+                <b>{{ dado.atividade_realizada }}</b>
+            </p>
+            <p>Prestador: <b>{{ dado.nome_funcionario }}</b> ({{ dado.tipo_contrato }})</p>
+            <p style="text-align: right; margin-top: 40px;">Data: <b>{{ dado.data }}</b></p>
+        </div>
+        <div class="signature-area">
+            <div class="line"></div>
+            <p>Assinatura do Prestador</p>
+        </div>
+    </div>
+</body>
+</html>

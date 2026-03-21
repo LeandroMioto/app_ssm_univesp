@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BI - Sítio São Marcos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/static/fundo.jpg'); background-size: cover; background-position: center; background-attachment: fixed; min-height: 100vh; color: white; display: flex; align-items: center; }
+        .hub-card { background: rgba(255,255,255,0.1); backdrop-filter: blur(15px); border-radius: 20px; padding: 40px; border: 1px solid rgba(255,255,255,0.2); }
+        .report-btn { transition: 0.3s; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); color: white; padding: 20px; text-align: left; }
+        .report-btn:hover { background: rgba(255,255,255,0.2); transform: scale(1.02); color: #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width: 800px;">
+        <div class="hub-card text-center shadow">
+            <h2 class="fw-bold mb-4"><i class="fas fa-chart-line me-2"></i>Central de Inteligência</h2>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <a href="/relatorio_vendas" class="btn report-btn w-100 h-100">
+                        <i class="fas fa-mug-hot fa-2x mb-3"></i><br>
+                        <h5 class="mb-1">Produção de Café</h5>
+                        <small class="text-white-50">Vendas, estoques e variedades.</small>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="/relatorio_despesas" class="btn report-btn w-100 h-100">
+                        <i class="fas fa-file-invoice-dollar fa-2x mb-3 text-info"></i><br>
+                        <h5 class="mb-1">Fluxo de Despesas</h5>
+                        <small class="text-white-50">Filtros por data e categoria.</small>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="/relatorio_pecuaria" class="btn report-btn w-100 h-100">
+                        <i class="fas fa-cow fa-2x mb-3 text-warning"></i><br>
+                        <h5 class="mb-1">Controle de Pecuária</h5>
+                        <small class="text-white-50">Giro de gado e pesagens.</small>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="/relatorio_pessoal" class="btn report-btn w-100 h-100">
+                        <i class="fas fa-users fa-2x mb-3 text-success"></i><br>
+                        <h5 class="mb-1">Recursos Humanos</h5>
+                        <small class="text-white-50">Pagamentos e recibos.</small>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-4"><a href="/" class="btn btn-link text-white-50">Voltar ao Painel</a></div>
+        </div>
+    </div>
+</body>
+</html>
