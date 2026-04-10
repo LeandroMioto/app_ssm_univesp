@@ -67,8 +67,8 @@ O controle de permissões é baseado na tabela pessoal:
 ---
 
 ## 👥 Equipe de Desenvolvimento (Univesp)
-* **Leandro Mioto** - Coordenador de TI / Lead Developer
-* 
+* **Leandro Mioto** - Lead Developer
+* **Mayza** - Coordenadora do projeto
 * 
 *
 * 
