@@ -67,8 +67,8 @@ O controle de permissões é baseado na tabela pessoal:
 ---
 
 ## 👥 Equipe de Desenvolvimento (Univesp)
-* **Leandro Mioto** - Líder técnico
-* **Mayza Rodrigues** - Coordenadora do projeto
+* **Leandro Mioto** — Líder técnico
+* **Mayza Rodrigues** — Coordenadora do projeto
 * **Antonio de Souza** — Colaborador 
 * **Allan Anderson Negreiros** — Colaborador 
 * **Jesiel Albano** — Colaborador 
